@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shaheen Emirates Car Rental - Premium car rental services in Abu Dhabi. Best prices, clean cars, fast booking.">
+    <meta name="keywords" content="car rental Abu Dhabi, car hire UAE, luxury cars, economy cars, affordable rental">
+    <meta name="author" content="Shaheen Emirates Car Rental">
+    <meta name="theme-color" content="#d4af37">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Shaheen Emirates Car Rental | Abu Dhabi - Premium Car Hire</title>
+    
+    
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="shahen.css" type="text/css">
+    
+    <!-- Favicon (Optional) -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🚗 </text> </svg>">
+</head>
+<body>
+    <!-- ===== NAVIGATION BAR ===== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#home" class="logo-link">
+                    <span class="logo-icon">🏢</span>
+                    <span class="logo-text">SHAHEEN</span>
+                </a>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#cars" class="nav-link">Cars</a></li>
+                <li><a href="#why-choose" class="nav-link">Why Us</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <button class="language-btn" onclick="toggleLanguage()" id="langBtn">عربي</button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Shaheen Emirates</h1>
+            <p class="hero-subtitle">Car Rental</p>
+            <p class="hero-description">Premium Car Rental Services in Abu Dhabi</p>
+            <p class="hero-tagline">Clean Cars • Affordable Prices • Fast Booking</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="openBookingModal()">
+                    <span class="btn-icon">📅</span> Book a Car
+                </button>
+                <a href="tel:+971522077558" class="btn btn-secondary">
+                    <span class="btn-icon">📞</span> Call Us
+                </a>
+            </div>
+            
+            <div class="hero-rating">
+                <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                <span class="rating-text">4.8 Google Rating (20+ Reviews)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">About Us</p>
+                <h2 class="section-title">Welcome to Shaheen Emirates</h2>
+                <p class="section-description">Your trusted car rental partner in Abu Dhabi since many years</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Why Choose Shaheen Emirates?</h3>
+                    <p>
+                        We provide premium car rental services with a commitment to excellence. 
+                        Our fleet consists of well-maintained, modern vehicles suitable for every need. 
+                        Whether you need a daily rental, monthly contract, or special occasion vehicle, 
+                        we have the perfect solution for you.
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">✨</div>
+                            <h4>Clean & Modern Vehicles</h4>
+                            <p>Latest model cars, regularly serviced and sanitized</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <h4>Best Prices in Abu Dhabi</h4>
+                            <p>Competitive rates with transparent pricing, no hidden fees</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <h4>Easy Booking Process</h4>
+                            <p>Quick and simple online booking with instant confirmation</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <h4>24/7 Customer Support</h4>
+                            <p>Professional support team available round the clock</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🚚</div>
+                            <h4>Delivery Service</h4>
+                            <p>Free car delivery to your location in Abu Dhabi</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🛡️</div>
+                            <h4>Insurance & Safety</h4>
+                            <p>Comprehensive insurance coverage included in all rentals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CARS SECTION ===== -->
+    <section class="cars section-padding" id="cars">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Our Fleet</p>
+                <h2 class="section-title">Popular Rental Cars</h2>
+                <p class="section-description">Choose from our wide selection of well-maintained vehicles</p>
+            </div>
+            
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars will be loaded here from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US SECTION ===== -->
+    <section class="why-choose section-padding" id="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Our Advantages</p>
+                <h2 class="section-title">Why Shaheen Emirates?</h2>
+                <p class="section-description">We're committed to providing the best car rental experience</p>
+            </div>
+            
+            <div class="why-grid" id="whyGrid">
+                <!-- Why items will be loaded here from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS SECTION ===== -->
+    <section class="reviews section-padding">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Customer Feedback</p>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-description">Read reviews from satisfied customers</p>
+            </div>
+            
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Reviews will be loaded here from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION SECTION ===== -->
+    <section class="location section-padding" id="location">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Find Us</p>
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-description">Visit our showroom or contact us today</p>
+            </div>
+            
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Address</h3>
+                        <p>Musaffah Popular - Al Daraj Street<br>Mohammed Bin Zayed City East 11<br>Abu Dhabi, UAE</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+971522077558">+971 52 207 7558</a></p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@shaheenemirates.ae">info@shaheenemirates.ae</a></p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🕐</div>
+                        <h3>Hours</h3>
+                        <p>Open Daily<br>8:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="map-container" id="mapContainer">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.7755902582657!2d54.37490!3d24.35850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4a8f0000001%3A0x1234567890abcdef!2sMusaffah%20Popular%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1234567890"
+                        class="map-iframe"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION SECTION ===== -->
+    <section class="cta section-padding" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Rent a Car?</h2>
+                <p>Don't wait! Book your car now or call us for more information.</p>
+                
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="openBookingModal()">
+                        <span class="btn-icon"></span> Book Now
+                    </button>
+                    <a href="tel:+971522077558" class="btn btn-secondary btn-lg">
+                        <span class="btn-icon">📞</span> Call: +971 52 207 7558
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shaheen Emirates</h3>
+                    <p>Premium car rental services in Abu Dhabi with competitive prices and excellent customer service.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Facebook">f</a>
+                        <a href="#" class="social-link" title="WhatsApp">W</a>
+                        <a href="#" class="social-link" title="Instagram">📷</a>
+                        <a href="#" class="social-link" title="LinkedIn">in</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cars">Cars</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Daily Rentals</a></li>
+                        <li><a href="#">Monthly Plans</a></li>
+                        <li><a href="#">Delivery Service</a></li>
+                        <li><a href="#">Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+971522077558">+971 52 207 7558</a></li>
+                        <li><a href="mailto:info@shaheenemirates.ae">info@shaheenemirates.ae</a></li>
+                        <li>Abu Dhabi, UAE</li>
+                        <li>Open Daily 8AM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shaheen Emirates Car Rental. All rights reserved.</p>
+                <p>شاهين الإمارات لتأجير السيارات</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BOOKING MODAL ===== -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Quick Booking Form</h2>
+                <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            </div>
+            
+            <form id="bookingForm" class="booking-form" onsubmit="handleBookingSubmit(event)">
+                <div class="form-group">
+                    <label for="carSelect">Select Car *</label>
+                    <select id="carSelect" required class="form-control">
+                        <option value="">-- Choose a car --</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickupDate">Pickup Date *</label>
+                        <input type="date" id="pickupDate" required class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dropoffDate">Dropoff Date *</label>
+                        <input type="date" id="dropoffDate" required class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Your full name" required class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number *</label>
+                    <input type="tel" id="phoneNumber" placeholder="+971 50 XXXX XXXX" required class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="your@email.com" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Special Requests</label>
+                    <textarea id="notes" placeholder="Any special requirements?" rows="3" class="form-control"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Send Booking via WhatsApp</button>
+                <p class="form-note">We'll send your booking details via WhatsApp for confirmation</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" onclick="scrollToTop()">
+        <span>↑</span>
+    </button>
+
+    <!-- Link to External JavaScript File -->
+    <script src="script.js" type="text/javascript" defer></script>
+</body>
+</html>
